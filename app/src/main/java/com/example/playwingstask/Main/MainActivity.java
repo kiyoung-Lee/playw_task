@@ -13,11 +13,15 @@ import org.json.JSONObject;
 public class MainActivity extends AppCompatActivity implements MainContract.activity {
 
     private MainContract.presenter presenter;
+    private MainAdapter adapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        adapter = new MainAdapter();
+
 
         presenter = new MainPresenterImpl(new MainRepositoryImpl());
         presenter.start();
