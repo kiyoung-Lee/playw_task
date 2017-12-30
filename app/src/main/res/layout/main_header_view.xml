@@ -10,11 +10,11 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="메인 도시"
-        android:id="@+id/main_city"
+        android:text="메인 정보"
+        android:id="@+id/main_info"
         android:layout_marginTop="10dp"
-        android:layout_marginLeft="15dp"
-        android:textSize="10dp"
+        android:layout_marginLeft="20dp"
+        android:textSize="14dp"
         />
 
     <TextView
@@ -22,15 +22,16 @@
         android:layout_height="wrap_content"
         android:text="타이틀"
         android:id="@+id/main_title"
+        android:textSize="20dp"
         android:layout_marginTop="10dp"
-        android:layout_marginLeft="15dp"
+        android:layout_marginLeft="20dp"
         android:textColor="@color/black_00"
         />
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="15dp"
+        android:layout_marginLeft="20dp"
         android:layout_marginTop="10dp"
         >
 
@@ -38,7 +39,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="출발기간"
-            android:textSize="12dp"
+            android:textSize="14dp"
             />
 
         <TextView
@@ -48,7 +49,7 @@
             android:id="@+id/main_arrival_date"
             android:layout_marginLeft="10dp"
             android:textColor="@color/black_00"
-            android:textSize="12dp"
+            android:textSize="14dp"
             />
 
     </LinearLayout>
@@ -56,15 +57,15 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="15dp"
-        android:layout_marginTop="10dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="5dp"
         >
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="유의사항"
-            android:textSize="12dp"
+            android:textSize="14dp"
             />
 
         <TextView
@@ -74,7 +75,7 @@
             android:id="@+id/main_caution"
             android:layout_marginLeft="10dp"
             android:textColor="@color/black_00"
-            android:textSize="12dp"
+            android:textSize="14dp"
             />
 
     </LinearLayout>
@@ -83,7 +84,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
-        android:layout_marginLeft="15dp"
+        android:layout_marginLeft="20dp"
         >
 
         <ImageView
@@ -99,7 +100,7 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="5dp"
             android:text="123"
-            android:textSize="11dp"
+            android:textSize="14dp"
             android:id="@+id/like_count"
             android:layout_toRightOf="@id/img_like"
             android:textColor="@color/black_00"
@@ -120,7 +121,7 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="5dp"
             android:text="123"
-            android:textSize="11dp"
+            android:textSize="14dp"
             android:id="@+id/reply_count"
             android:layout_toRightOf="@+id/img_reply"
             android:textColor="@color/black_00"
@@ -133,8 +134,8 @@
             android:id="@+id/city_name"
             android:layout_toRightOf="@id/reply_count"
             android:layout_marginRight="10dp"
-            android:layout_marginLeft="160dp"
-            android:textSize="10dp"
+            android:layout_marginLeft="125dp"
+            android:textSize="14dp"
             android:layout_centerVertical="true"
             android:textColor="@color/black_00"
             />
@@ -144,6 +145,7 @@
             android:layout_height="wrap_content"
             android:text="189,000"
             android:id="@+id/trip_price"
+            android:textSize="17dp"
             android:layout_toRightOf="@id/city_name"
             android:textColor="@color/black_00"
             />
