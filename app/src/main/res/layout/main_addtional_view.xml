@@ -1,8 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-              android:layout_width="match_parent"
-              android:layout_height="wrap_content"
-              android:orientation="vertical" >
+<LinearLayout
+      xmlns:android="http://schemas.android.com/apk/res/android"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:orientation="vertical"
+      android:layout_marginTop="5dp"
+    >
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -15,74 +18,78 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="이 항공권 정보가 유용했나요?"
-            android:textColor="@color/red_new"
-            android:layout_gravity="center"
-            />
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:textColor="@color/orangered"
             android:layout_gravity="center"
             android:layout_marginTop="10dp"
+            />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
             >
 
             <ImageView
-                android:layout_width="80dp"
-                android:layout_height="80dp"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:id="@+id/img_very_dissatisfied"
                 android:src="@drawable/ic_sentiment_very_dissatisfied_black_18dp"
-                android:layout_weight="1"
-                android:layout_marginLeft="100dp"
+                android:layout_marginLeft="60dp"
                 />
 
             <ImageView
-                android:layout_width="80dp"
-                android:layout_height="80dp"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:id="@+id/img_dissatisfied"
                 android:src="@drawable/ic_sentiment_dissatisfied_black_18dp"
-                android:layout_marginLeft="10dp"
-                android:layout_weight="1"
+                android:layout_toRightOf="@id/img_very_dissatisfied"
+                android:layout_marginLeft="5dp"
                 />
 
             <ImageView
-                android:layout_width="80dp"
-                android:layout_height="80dp"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:id="@+id/sentiment_neutral"
                 android:src="@drawable/ic_sentiment_neutral_black_18dp"
-                android:layout_marginLeft="10dp"
-                android:layout_weight="1"
+                android:layout_toRightOf="@id/img_dissatisfied"
+                android:layout_marginLeft="5dp"
                 />
 
             <ImageView
-                android:layout_width="80dp"
-                android:layout_height="80dp"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:id="@+id/img_sentiment_satisfied"
                 android:src="@drawable/ic_sentiment_satisfied_black_18dp"
-                android:layout_marginLeft="10dp"
-                android:layout_weight="1"
+                android:layout_toRightOf="@id/sentiment_neutral"
+                android:layout_marginLeft="5dp"
                 />
 
             <ImageView
-                android:layout_width="80dp"
-                android:layout_height="80dp"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:id="@+id/img_sentiment_very_statisfied"
                 android:src="@drawable/ic_sentiment_very_satisfied_black_18dp"
-                android:layout_weight="1"
-                android:layout_marginRight="100dp"
-                android:layout_marginLeft="10dp"
+                android:layout_toRightOf="@id/img_sentiment_satisfied"
+                android:layout_marginLeft="5dp"
                 />
 
-        </LinearLayout>
+        </RelativeLayout>
 
     </LinearLayout>
 
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="30dp">
+        android:layout_marginTop="10dp">
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="35dp"
             android:orientation="horizontal"
             android:layout_centerInParent="true"
             android:gravity="center"
-            android:background="@color/white_00"
+            android:background="@drawable/border_rect_line_color"
             >
 
             <ImageView
@@ -107,15 +114,15 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="30dp">
+        android:layout_marginTop="10dp">
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="35dp"
             android:orientation="horizontal"
             android:layout_centerInParent="true"
             android:gravity="center"
-            android:background="@color/white_00"
+            android:background="@drawable/border_rect_line_color"
             >
 
             <ImageView

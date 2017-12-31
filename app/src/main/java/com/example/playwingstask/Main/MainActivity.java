@@ -1,5 +1,7 @@
 package com.example.playwingstask.Main;
 
+import static com.example.playwingstask.Util.Layout.getFormattedPrice;
+
 import android.content.pm.ActivityInfo;
 import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
@@ -21,6 +23,8 @@ import butterknife.ButterKnife;
 
 public class MainActivity extends AppCompatActivity implements MainContract.activity {
 
+    @BindView(R.id.company_name)
+    TextView companyName;
     @BindView(R.id.main_image)
     ImageView mainImageView;
     @BindView(R.id.main_info)
@@ -74,13 +78,14 @@ public class MainActivity extends AppCompatActivity implements MainContract.acti
 
     @Override
     public void showTripDetailView(DetailPage detailPageData) {
+        companyName.setText(detailPageData.getCompany().getName());
         title.setText(detailPageData.getTitle());
         mainInfo.setText(detailPageData.getInfo());
         Glide.with(this).load(detailPageData.getImageUrl()).into(mainImageView);
         likeCount.setText(String.valueOf(detailPageData.getLikecount()));
         replyCount.setText(String.valueOf(detailPageData.getCommentCount()));
         cityName.setText(detailPageData.getMainCityName());
-        tripPrice.setText(String.valueOf(detailPageData.getMainPrice()));
+        tripPrice.setText(String.valueOf(getFormattedPrice(detailPageData.getMainPrice())));
     }
 
     @Override

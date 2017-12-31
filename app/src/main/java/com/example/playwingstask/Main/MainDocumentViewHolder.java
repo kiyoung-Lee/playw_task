@@ -59,6 +59,6 @@ public class MainDocumentViewHolder extends BaseRecyclerViewHolder<Document, Mai
 
     @JavascriptInterface
     public void resize(final float height) {
-        presenter.setHolderHeight(view.getHeight() + 250);
+        presenter.setHolderHeight(view.getHeight() + 260);
     }
 }
