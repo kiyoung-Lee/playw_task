@@ -12,6 +12,7 @@
         android:layout_height="match_parent"
         android:background="@color/gray_01"
         android:layout_weight="1"
+        android:fillViewport="true"
         >
 
         <LinearLayout
@@ -22,7 +23,7 @@
 
             <ImageView
                 android:layout_width="match_parent"
-                android:layout_height="200dp"
+                android:layout_height="wrap_content"
                 android:id="@+id/main_image"
                 />
 

@@ -1,10 +1,13 @@
 package com.example.playwingstask.Main;
 
+import android.content.pm.ActivityInfo;
+import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -41,6 +44,11 @@ public class MainActivity extends AppCompatActivity implements MainContract.acti
 
     private MainContract.presenter presenter;
     private MainAdapter adapter;
+    private LinearLayoutManager manager;
+    private int documentViewHeight;
+    private int count = 0;
+    private Handler mHandler;
+    private Runnable mRunnable;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -49,14 +57,19 @@ public class MainActivity extends AppCompatActivity implements MainContract.acti
         ButterKnife.bind(this);
 
         adapter = new MainAdapter();
-        documentList.setLayoutManager(new LinearLayoutManager(this));
-        documentList.setAdapter(adapter);
-
         presenter = new MainPresenterImpl(new MainRepositoryImpl());
         presenter.setActivityView(this);
         presenter.setDocumentAdapterModel(adapter);
         presenter.setDocumentAdapterView(adapter);
+
+        manager = new LinearLayoutManager(this);
+        documentList.setLayoutManager(manager);
+        documentList.setAdapter(adapter);
+        adapter.setPresenter(presenter);
+        documentList.setNestedScrollingEnabled(false);
+
         presenter.start();
+
     }
 
     @Override
@@ -73,5 +86,27 @@ public class MainActivity extends AppCompatActivity implements MainContract.acti
     @Override
     public void showToast(String msg) {
         Toast.makeText(this, msg, Toast.LENGTH_SHORT).show();
+    }
+
+    @Override
+    public void setDocumentViewHeight(float height) {
+        documentViewHeight += height;
+        count++;
+
+        if(count == adapter.getItemCount()){
+            mRunnable = new Runnable() {
+                @Override
+                public void run() {
+                    MainActivity.this.runOnUiThread(new Runnable() {
+                        @Override
+                        public void run() {
+                            documentList.setLayoutParams(new LinearLayout.LayoutParams(documentList.getLayoutParams().MATCH_PARENT, documentViewHeight));
+                        }
+                    });
+                }
+            };
+            mHandler = new Handler();
+            mHandler.postDelayed(mRunnable, 400);
+        }
     }
 }

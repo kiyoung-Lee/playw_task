@@ -2,14 +2,15 @@
 <LinearLayout
       xmlns:android="http://schemas.android.com/apk/res/android"
       android:layout_width="match_parent"
-      android:layout_height="match_parent"
+      android:layout_height="wrap_content"
       android:orientation="vertical"
-    >
+      >
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Title"
+        android:id="@+id/document_title"
         android:layout_margin="10dp"
         android:textSize="15dp"
         />
@@ -18,8 +19,9 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="10dp"
-        android:id="@+id/document_web"
+        android:id="@+id/document_webview"
         >
     </WebView>
 
 </LinearLayout>
+
