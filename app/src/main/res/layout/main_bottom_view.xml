@@ -3,53 +3,62 @@
       xmlns:android="http://schemas.android.com/apk/res/android"
       android:layout_width="match_parent"
       android:layout_height="match_parent"
-      android:orientation="horizontal"
-      android:layout_weight="1"
+      android:orientation="vertical"
+      android:layout_weight="5"
+      android:gravity="bottom"
     >
 
-    <RelativeLayout
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@drawable/border_rect_line_color"
-        android:layout_weight="1">
+        android:orientation="horizontal"
+        >
 
-        <ImageView
+        <RelativeLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@drawable/ic_favorite_border_black_18dp"
-            android:layout_centerInParent="true"
-            android:layout_marginTop="30dp"
+            android:background="@drawable/border_rect_line_color"
+            android:layout_weight="1">
 
-            />
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_favorite_border_black_18dp"
+                android:layout_centerInParent="true"
+                android:layout_marginTop="30dp"
 
-    </RelativeLayout>
+                />
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="예매 사이트로 이동"
-        android:textColor="@color/white_00"
-        android:gravity="center"
-        android:layout_weight="3"
-        android:background="@color/red_d7"
-        android:padding="14dp"
-        android:layout_margin="1dp"
-        />
+        </RelativeLayout>
 
-    <RelativeLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:background="@drawable/border_rect_line_color"
-        android:layout_weight="1">
-
-        <ImageView
+        <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@drawable/ic_share_black_18dp"
-
-            android:layout_centerInParent="true"
-            android:layout_marginTop="30dp"
+            android:text="예매 사이트로 이동"
+            android:textColor="@color/white_00"
+            android:gravity="center"
+            android:layout_weight="3"
+            android:background="@color/red_d7"
+            android:padding="14dp"
+            android:layout_margin="1dp"
             />
-    </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/border_rect_line_color"
+            android:layout_weight="1">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_share_black_18dp"
+
+                android:layout_centerInParent="true"
+                android:layout_marginTop="30dp"
+                />
+        </RelativeLayout>
+
+    </LinearLayout>
 
 </LinearLayout>

@@ -12,8 +12,12 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@color/gray_01"
-        android:layout_weight="0.17"
+        android:layout_weight="1"
         android:fillViewport="true"
+        android:id="@+id/main_scrollview"
+        android:descendantFocusability="beforeDescendants"
+        android:focusableInTouchMode="true"
+        android:fitsSystemWindows="false"
         >
 
         <LinearLayout
