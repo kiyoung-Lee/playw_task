@@ -42,7 +42,9 @@ public class MainDocumentViewHolder extends BaseRecyclerViewHolder<Document, Mai
         super.bind(data);
 
         documentTitle.setText(data.getTitle());
-        documentWebView.loadData(data.getContent(), "text/html", "utf-8");
+        WebSettings settings = documentWebView.getSettings();
+        settings.setDefaultTextEncodingName("utf-8");
+        documentWebView.loadData(data.getContent(), "text/html; charset=utf-8", "utf-8");
         documentWebView.getSettings().setJavaScriptEnabled(true);
         documentWebView.setWebViewClient(new WebViewClient() {
             @Override
