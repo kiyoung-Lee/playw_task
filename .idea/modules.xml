@@ -4,7 +4,8 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
       <module fileurl="file://C:\Private\Git\playw_task\app\app.iml" filepath="C:\Private\Git\playw_task\app\app.iml" />
-      <module fileurl="file://$PROJECT_DIR$/playw_task.iml" filepath="$PROJECT_DIR$/playw_task.iml" />
+      <module fileurl="file://C:\Private\Git\playwings_task\playw_task.iml" filepath="C:\Private\Git\playwings_task\playw_task.iml" />
+      <module fileurl="file://$PROJECT_DIR$/playwings_task.iml" filepath="$PROJECT_DIR$/playwings_task.iml" />
       <module fileurl="file://C:\Private\Git\playw_task\playwings_task.iml" filepath="C:\Private\Git\playw_task\playwings_task.iml" />
     </modules>
   </component>

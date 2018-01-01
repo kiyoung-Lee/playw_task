@@ -40,6 +40,7 @@ public class MainPresenterImpl implements MainContract.presenter {
     public void start() {
         checkNotNull(documentAdapterModel, "DocumentAdapterModel Is Null");
         checkNotNull(documentAdapterView, "documentAdapterView Is Null");
+        checkNotNull(activityView, "ActivityView Is Null");
 
         DetailPage detailPageData = repository.getOrderDetailPageData();
 
@@ -52,8 +53,10 @@ public class MainPresenterImpl implements MainContract.presenter {
         }
     }
 
+    @SuppressLint("RestrictedApi")
     @Override
     public void setHolderHeight(float height) {
+        checkNotNull(activityView, "ActivityView Is Null");
         activityView.setDocumentViewHeight(height);
     }
 }
