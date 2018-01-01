@@ -49,7 +49,7 @@ public class MainDocumentViewHolder extends BaseRecyclerViewHolder<Document, Mai
         documentWebView.setWebViewClient(new WebViewClient() {
             @Override
             public void onPageFinished(WebView view, String url) {
-                documentWebView.loadUrl("javascript:MyApp.resize(document.body.getBoundingClientRect().height)");
+                documentWebView.loadUrl("javascript:MyApp.resize()");
                 super.onPageFinished(view, url);
 
             }
@@ -59,7 +59,7 @@ public class MainDocumentViewHolder extends BaseRecyclerViewHolder<Document, Mai
     }
 
     @JavascriptInterface
-    public void resize(final float height) {
-        presenter.setHolderHeight(view.getHeight() + 260);
+    public void resize() {
+        presenter.setHolderHeight(view.getHeight() * (context.getResources().getDisplayMetrics().density * 6));
     }
 }
